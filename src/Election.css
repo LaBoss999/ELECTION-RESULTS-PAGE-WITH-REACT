@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* Background with subtle US-themed gradient */
+body {
+  background: linear-gradient(to bottom, #0a0a5b, #1a1a8c, #2a2aaf);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+/* Flexbox layout for table & image */
+.election-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px; /* Space between image & table */
+  flex-wrap: wrap; /* Adjust for responsiveness */
+}
+
+/* Trump Image Styling & Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.trump-img {
+  width: 280px;
+  height: auto;
+  border-radius: 10px;
+  border: 5px solid white;
+  animation: float 3s ease-in-out infinite;
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Election Table Styling */
+.table-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Table Styling */
+.election-table {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  border-collapse: collapse;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Table Header */
+.election-table th {
+  background-color: #b22234;
+  color: white;
+  padding: 16px;
+  font-size: 1.2rem;
+  border: 3px solid white;
+}
+
+/* Table Body */
+.election-table td {
+  padding: 16px;
+  border: 3px solid white;
+  font-size: 1rem;
+}
+
+/* Alternate Row Colors */
+.election-table tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+.election-table tr:nth-child(odd) {
+  background-color: #e6e6e6;
+}
+
+/* Footer Styling */
+footer {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #ddd;
+}
